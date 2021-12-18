@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
-const int maxn = 1e5+5;
+const int maxn = 1e6+5;
 const int mod = 998244353;
 typedef long long ll;
 int a[maxn];
-ll qpow(ll x,ll p,ll mod)
+ll qpow(ll a,ll b,ll p)
 {
-    ll res=1;
-    for(;p;p>>=1,x=x*x%mod)
-        if(p&1) res=res*x%mod;
-    return res;
+    ll ret = 1;
+    for(;b;b>>=1,a=a*a%p)
+        if(b&1) ret=ret*a%p;
+    return ret;
 }
 int main()
 {
@@ -20,9 +20,8 @@ int main()
     for(int i=n-1;i>=0;i--)
     {
         swap(p,q);
-        p += a[i]*q;
-        p %= mod;
+        p = (p+a[i]*q)%mod;
     }
-    cout<<(p*qpow(q, mod-2, mod)%mod+mod)%mod<<endl;
+    cout<<p*qpow(q, mod-2, mod)%mod<<endl;
     return 0;
 }
