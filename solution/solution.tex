@@ -7,7 +7,7 @@
 \maketitle
 \addsolution{Again! Again!}{AgOH}{数论}
 \addsolution{Base! Base!}{Zxilly}{模拟}
-\addsolution{Move! Move!}{AgOH}{贪心+链表/线段树}
+\addsolution{Move! Move!}{AgOH}{贪心+链表}
 \addsolution{Happy! Happy!}{AgOH}{完全背包}
 \addsolution{Pair! Pair!}{AgOH}{枚举}
 \addsolution{Balloon! Balloon!}{AgOH}{模拟}
@@ -35,6 +35,14 @@
 
 \makesolution
 \section*{做法}
+
+首先，看到“字典序最大”马上就想到了这题肯定是贪心。
+
+然后我们发现会有多次在 $P$ 中进行删除的操作，又想到可以使用链表进行快速删除的操作。
+
+于是此题就做出来了：对 $P$ 开出一个链表，并记录下每个数字 $i$ 所在的位置 $pos[i]$，然后我们贪心地从 $n$ 到 $1$ 遍历 $i$，如果能够输出（$pos[i]$ 位置以及 $pos[i]$ 的后一个位置上的两个数都存在）就输出，直到遍历完即可得出结果。时间复杂度为 $O(n)$。
+
+标程中使用 STL 中的 \verb|list| 来实现链表。因为只有删除操作，所以整个过程中 \verb|ls.end()| 是肯定不会改变的，所以我们可以用它来标记某个数被删除掉了。
 
 \section*{标程}
 \std{C}
