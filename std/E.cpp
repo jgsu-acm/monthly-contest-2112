@@ -19,7 +19,7 @@ int main()
         {
             if(k%i) continue;
             int j = k/i;
-            if(mp[i]&&mp[j]&&mp[i]+mp[j]==k)    // 若满足条件（存在且坐标和等于枚举出的结果）则答案加一
+            if(mp[i]&&mp[j]&&mp[i]+mp[j]==k)    // 若满足条件(存在且坐标和等于枚举出的结果)则答案加一
                 ans++;
         }
     }
