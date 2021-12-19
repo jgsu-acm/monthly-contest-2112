@@ -7,7 +7,11 @@
 \begin{document}
 \maketitle
 \addproblem{Again! Again!}{1000}{256}{传统}{AgOH}
-\addproblem{Base32}{1000}{256}{传统}{Zxilly}
+\addproblem{Base! Base!}{1000}{256}{传统}{Zxilly}
+\addproblem{Move! Move!}{1000}{256}{传统}{AgOH}
+\addproblem{Happy! Happy!}{1000}{128}{传统}{AgOH}
+\addproblem{Move! Move!}{1000}{256}{传统}{AgOH}
+\addproblem{xxx}{1000}{256}{传统}{AgOH}
 
 \section*{比赛信息}
 \ctinfotab{ACM\ |个人赛|不封榜}{C/C++，Python，Java}{3}
@@ -111,5 +115,116 @@ Base32 编码是一种使用 32 种字符（字母 A-Z 和数字 2-7）对任意
 \section*{输出格式}
 
 一行，输入的字符串的 Base32 编码。
+
+\makeproblem
+\section*{题目描述}
+
+给定 $1 \sim n$ 的一个排列 $P$ 及一个初始状态下为空的队列 $Q$，每次操作你可以选择 $P$ 中的相邻的两个数字，将其从 $P$ 中移出并按其原来的相对顺序放入 $Q$，你需要一直重复这个操作直到 $P$ 为空。
+
+显然根据决策的不同会导致最终 $Q$ 的结果不同，请求出在所有方案中使得 $Q$ 的字典序最大的方案，并输出此时 $Q$ 的结果。
+
+\section*{输入格式}
+
+第一行，一个整数 $n~(1 \leq n \leq {10}^5)$，代表 $P$ 中数字个数。
+
+第二行，$1 \sim n$ 的一个排列。
+
+\section*{输出格式}
+
+一行，$n$ 个数，代表答案。
+
+\section*{输入输出样例}
+\testcasetab
+{
+	4\par
+	1 3 2 4
+}
+{
+	3 2 1 4
+}
+\testcasetab
+{
+	4\par
+	3 1 4 2
+}
+{
+	4 2 3 1
+}
+
+\section*{说明/提示}
+
+【样例解释 \#1】
+
+先从 $P$ 中取出 $(3,2)$ 并放进 $Q$，此时 $Q$ 为 $[3,2]$，再从 $P$ 中取出 $(1,4)$ 放进 $Q$，此时 $Q$ 为 $[3,2,1,4]$。可以证明这是使得 $Q$ 的字典序最大的方案。
+
+【样例解释 \#2】
+
+先从 $P$ 中取出 $(4,2)$ 并放进 $Q$，此时 $Q$ 为 $[4,2]$，再从 $P$ 中取出 $(3,1)$ 放进 $Q$，此时 $Q$ 为 $[4,2,3,1]$。可以证明这是使得 $Q$ 的字典序最大的方案。
+
+
+\makeproblem
+\section*{题目描述}
+
+|Zxilly| 靠着 GSOC 获取了一笔不菲的资金，他准备花掉这笔钱高兴高兴，与众不同的是，|Zxilly| 准备用这笔钱来买一些软件。
+
+|JetBrains| 有 $n$ 个软件，每个软件的售价为 $s_i$。为了高兴，|Zxilly| 决定尽可能多地花掉他的钱；为了高兴，|Zxilly| 可能会重复买同一个软件很多次，然后把多买的授权送给别人。
+
+|AgOH| 偷偷地告诉了你 |Zxilly| 获取的资金金额，你能算出 |Zxilly| “高兴”完后会剩下多少钱吗？
+
+\section*{输入格式}
+
+第一行，一个整数 $M~(1 \leq M \leq {10}^7)$，代表 |Zxilly| 获取的资金金额。
+
+第二行，一个整数 $n~(1 \leq n \leq {10}^4)$，代表 |JetBrains| 有多少种软件。
+
+第三行，$n$ 个整数 $s_i~(1 \leq s_i \leq M)$，代表第 $i$ 种软件的售价为多少。
+
+数据保证 $nM \leq 2 \times {10}^8$。
+
+\section*{输出格式}
+
+一行，一个整数，代表答案。
+
+\section*{输入输出样例}
+\testcasetab
+{
+	17\par
+	2\par
+	7 9
+}
+{
+	1
+}
+
+\makeproblem
+\section*{题目描述}
+
+给定一个其中数字各不相同的数列 ${a_n}$，请计算出能共有多少个能够使得 $a_i \times a_j = i+j~(i<j)$ 成立的不同的序偶 $(i,j)$。
+
+\section*{输入格式}
+
+第一行，一个整数 $n~(2 \leq n \leq 2 \times {10}^5)$，代表数列 ${a_n}$ 的长度。
+
+第二行，$n$ 个整数 $a_i~(1 \leq a_i \leq 2n)$。
+
+\section*{输出格式}
+
+一行，一个整数，代表答案。
+
+\section*{输入输出样例}
+\testcasetab
+{
+	5\par
+	1 3 4 6 5
+}
+{
+	2
+}
+
+\makeproblem
+\section*{题目描述}
+\section*{输入格式}
+\section*{输出格式}
+\section*{输入输出样例}
 
 \end{document}
