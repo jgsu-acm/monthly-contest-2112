@@ -7,16 +7,17 @@
 \maketitle
 \addsolution{Again! Again!}{AgOH}{数论}
 \addsolution{Base! Base!}{Zxilly}{模拟}
-\addsolution{Pair! Pair!}{AgOH}{贪心+线段树/链表}
-\addsolution{xxx}{AgOH}{模拟}
-\addsolution{xxx}{AgOH}{模拟}
-\addsolution{xxx}{AgOH}{模拟}
+\addsolution{Move! Move!}{AgOH}{贪心+链表/线段树}
+\addsolution{Happy! Happy!}{AgOH}{完全背包}
+\addsolution{Pair! Pair!}{AgOH}{枚举}
+\addsolution{Balloon! Balloon!}{AgOH}{模拟}
 
 \section*{题目概览}
 \solutiontab
 
 \makesolution
 \section*{做法}
+
 按照题意求出连分数的值后进行有理数取余即可得出答案。
 
 因为模数是质数，故可以采取简单的快速幂法求逆元。
@@ -52,10 +53,14 @@
 枚举 $i+j$ 的值，并判断是否满足条件即可。
 
 \section*{标程}
+\std{E}
 
 \makesolution
 \section*{做法}
 
+我们需要记录一个字符串出现了多少次，很显然使用一个 \verb|map<string,int>| 就可以把某字符串本身到其出现的次数的映射存下了。
+
 \section*{标程}
+\std{F}
 
 \end{document}
