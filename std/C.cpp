@@ -15,7 +15,7 @@ int main()
         ls.push_back(x);
         pos[x] = --ls.end();    // 记录位置，注意 end() 是最后一个数的下一位
     }
-    for(int i=n;i>=1;i--)
+    for(int i=n;i>=1;i--)       // 贪心地从大到小枚举
     {
         auto s = pos[i], f = s++;   // 让 s 变为 f 的下一个位置
         if(f!=ls.end()&&s!=ls.end())    // 如果两个数都存在，那么输出并删除
