@@ -17,8 +17,7 @@ int main()
     }
     for(int i=n;i>=1;i--)
     {
-        auto f = pos[i], s = pos[i];
-        ++s;    // 让 s 变为 f 的下一个位置
+        auto s = pos[i], f = s++;   // 让 s 变为 f 的下一个位置
         if(f!=ls.end()&&s!=ls.end())    // 如果两个数都存在，那么输出并删除
         {
             cout<<i<<' '<<*s<<' ';
