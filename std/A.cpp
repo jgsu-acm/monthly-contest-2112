@@ -20,8 +20,8 @@ int main()
     for(int i=n-1;i>=0;i--)
     {
         swap(p,q);
-        p = (p+a[i]*q)%mod;
+        p = (p+a[i]*q)%mod;     // 注意边算边取余
     }
-    cout<<p*qpow(q, mod-2, mod)%mod<<endl;
+    cout<<p*qpow(q, mod-2, mod)%mod<<endl;  // 快速幂法求逆元
     return 0;
 }
