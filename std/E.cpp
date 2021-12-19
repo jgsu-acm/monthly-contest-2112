@@ -10,16 +10,16 @@ int main()
     {
         int x;
         cin>>x;
-        mp[x]=i;
+        mp[x]=i;     // 存下坐标
     }
     int ans = 0;
-    for(int k=3;k<=2*n-1;k++)
+    for(int k=3;k<=2*n-1;k++)   // 枚举 i+j 的值
     {
-        for(int i=1;i*i<k;i++)
+        for(int i=1;i*i<k;i++)  // 分解因子
         {
             if(k%i) continue;
             int j = k/i;
-            if(mp[i]&&mp[j]&&mp[i]+mp[j]==k)
+            if(mp[i]&&mp[j]&&mp[i]+mp[j]==k)    // 若满足条件（存在且坐标和等于枚举出的结果）则答案加一
                 ans++;
         }
     }
